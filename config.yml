@@ -1,0 +1,25 @@
+# go-librespot — configuration Pirate Audio
+device_name: Pirate Audio
+device_type: speaker
+
+audio_backend: alsa
+audio_device: default        # le DAC hifiberry devient la carte par défaut une fois l'audio intégré coupé
+bitrate: 160                 # 320 possible, mais 160 ménage le Pi Zero W
+
+volume_steps: 100
+initial_volume: 40
+
+# Spotify Connect : l'appareil apparaît dans l'appli Spotify (même réseau)
+zeroconf_enabled: true
+zeroconf_backend: avahi      # avahi-daemon tourne déjà sur Raspberry Pi OS
+credentials:
+  type: zeroconf
+  zeroconf:
+    persist_credentials: true
+
+# API locale utilisée par l'écran et les boutons
+server:
+  enabled: true
+  address: localhost
+  port: 3678
+  image_size: default        # ~300 px, suffisant pour l'écran 240x240
