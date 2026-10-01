@@ -26,8 +26,8 @@ It should also work on Bookworm and on newer Pis (the installer picks the arm64 
 2. On the Pi:
 
    ```bash
-   git clone <this-repo-url> pirate-spotify
-   cd pirate-spotify
+   git clone https://github.com/jbheren/pirate-audio.git
+   cd pirate-audio
    ./install.sh        # run as your normal user, NOT with sudo
    sudo reboot
    ```
